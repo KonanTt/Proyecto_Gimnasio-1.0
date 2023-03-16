@@ -5,6 +5,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JRadioButton;
+import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 
@@ -182,6 +183,16 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
         this.txtCodigoInstructor = txtCodigoInstructor;
     }
 
+    public JSpinner getSpinnSueldo() {
+        return spinnSueldo;
+    }
+
+    public void setSpinnSueldo(JSpinner spinnSueldo) {
+        this.spinnSueldo = spinnSueldo;
+    }
+    
+    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -210,6 +221,8 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
         btnGuardar = new javax.swing.JButton();
         btnCancelar = new javax.swing.JButton();
         jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        spinnSueldo = new javax.swing.JSpinner();
         horario = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         txtBuscar = new javax.swing.JTextField();
@@ -258,8 +271,8 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
         jPanel2.add(Nocturno, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 186, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel10.setText("Horario:");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(492, 136, -1, -1));
+        jLabel10.setText("Sueldo:");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 230, -1, -1));
         jPanel2.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 116, 191, -1));
         jPanel2.add(txtApellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(212, 166, 191, -1));
 
@@ -293,6 +306,13 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
         jLabel12.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel12.setText("Apellido:");
         jPanel2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        jLabel14.setText("Horario:");
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, -1, -1));
+
+        spinnSueldo.setModel(new javax.swing.SpinnerNumberModel(0.0d, null, null, 1.0d));
+        jPanel2.add(spinnSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 230, 90, -1));
 
         javax.swing.GroupLayout jDlgInstructorLayout = new javax.swing.GroupLayout(jDlgInstructor.getContentPane());
         jDlgInstructor.getContentPane().setLayout(jDlgInstructorLayout);
@@ -374,13 +394,13 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
 
         tblInstructor.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código de instructor", "Cédula", "Nombre", "Apellido", "Área de trabajo", "Horario"
+                "Código de instructor", "Cédula", "Nombre", "Apellido", "Área de trabajo", "Horario", "Sueldo"
             }
         ));
         jScrollPane1.setViewportView(tblInstructor);
@@ -422,6 +442,7 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
@@ -432,6 +453,7 @@ public class VistaInstructor extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSpinner spinnSueldo;
     private javax.swing.JTable tblInstructor;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtAreaTrabajo;

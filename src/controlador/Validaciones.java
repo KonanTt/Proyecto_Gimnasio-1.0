@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 /**
  *
- * @author Asus
+ * @author TATIANA LALVAY
  */
 public class Validaciones {
     //Validar cedula

@@ -3,7 +3,9 @@ package controlador;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
@@ -34,6 +36,8 @@ public class ControladorInstructor {
         vista.getBtnActualizar().addActionListener(l -> cargarTablaDeInstructores());
         vista.getBtnModificar().addActionListener(l -> cargarDatosInstructoresEnTXT());
         vista.getBtnEliminar().addActionListener(l -> eliminarInstructor());
+        vista.getBtnCancelar().addActionListener(l -> cancelar());
+        
         buscarRegistros();
     }
 
@@ -48,6 +52,7 @@ public class ControladorInstructor {
         //Quitar visibilidad del codigo del instructor
         vista.getTxtCodigoInstructor().setVisible(false);
 
+        LimpiarTablas();
     }
 
     public void cargarTablaDeInstructores() {
@@ -111,7 +116,7 @@ public class ControladorInstructor {
                         persona.eliminarPersonaNoCreada(vista.getTxtCedula().getText());
                     }
                 } else {
-                    System.out.println("Error: No se registrar la persona");
+                    System.out.println("Error: No se registro la persona");
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "El numero de cedula ya se encuentra registrado en la base de datos");
@@ -286,5 +291,22 @@ public class ControladorInstructor {
         };
 
         vista.getTxtBuscar().addKeyListener(eventoTeclado); //"addKeyListener" es un metodo que se le tiene que pasar como argumento un objeto de tipo keyListener 
+    }
+
+    public void LimpiarTablas() {
+        vista.getTxtCedula().setText("");
+        vista.getTxtNombre().setText(" ");
+        vista.getTxtApellido().setText(" ");
+        vista.getTxtDireccion().setText(" ");
+        vista.getTxtTelefono().setText(" ");
+        vista.getTxtAreaTrabajo().setText(" ");
+        vista.getFechaDeNacimiento().setDate(null);
+        vista.getMatutino().setSelected(false);
+        vista.getVespertino().setSelected(false);
+        vista.getNocturno().setSelected(false);
+    }
+    
+    public void cancelar() {
+        vista.getjDlgInstructor().setVisible(false);
     }
 }

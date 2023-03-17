@@ -138,44 +138,40 @@ public class VistaServicio extends javax.swing.JInternalFrame {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Roboto Medium", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Roboto Medium", 1, 24)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Registrar servicio");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 400, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 400, -1));
 
         jLabel4.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
         jLabel4.setText("Nombre:");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 80, -1));
-        jPanel3.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 170, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 80, -1));
+        jPanel3.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 170, -1));
 
         jLabel6.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        jLabel6.setText("Costo:");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 70, -1));
-        jPanel3.add(spinnerCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 100, -1));
-        jPanel3.add(txtCodigoServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 60, 50, -1));
+        jLabel6.setText("Costo por mes:");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 130, -1));
+        jPanel3.add(spinnerCosto, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 100, -1));
+        jPanel3.add(txtCodigoServicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 110, 50, -1));
 
         btnCancelar.setText("Cancelar");
-        jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 200, -1, -1));
+        jPanel3.add(btnCancelar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, 100, 40));
 
         btnGuardar.setText("Guardar");
-        jPanel3.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+        jPanel3.add(btnGuardar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 100, 40));
 
         javax.swing.GroupLayout jDlgServicioLayout = new javax.swing.GroupLayout(jDlgServicio.getContentPane());
         jDlgServicio.getContentPane().setLayout(jDlgServicioLayout);
         jDlgServicioLayout.setHorizontalGroup(
             jDlgServicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDlgServicioLayout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE)
         );
         jDlgServicioLayout.setVerticalGroup(
             jDlgServicioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDlgServicioLayout.createSequentialGroup()
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 258, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel16.setFont(new java.awt.Font("Roboto Black", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(51, 102, 255));
